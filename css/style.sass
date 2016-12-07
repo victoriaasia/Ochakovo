@@ -1,0 +1,295 @@
+$orange: #ef7a12
+$yellow: #febc2b
+$vine: #741212
+$white: #fff
+$pale: #efeadc
+$black: #000
+
+// reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+img
+  width: 100%
+  height: auto
+a, a:hover
+  text-decoration: none
+.sp-container ::-moz-selection
+  background: $orange
+  color: $white
+.sp-container ::selection
+  background: $orange
+  color: $white
+
+
+.sp-container
+  width: 1100px
+  margin: 0 auto
+.sp-header
+  background: url(../img/header.png)
+  background-size: cover
+  background-position: center top
+  height: 600px
+  width: 100%
+  position: relative
+.sp-logo
+  position: absolute
+  top: 80px
+  left: 35px
+  width: 470px
+  height: 280px
+  background: url(../img/logo.png)
+  background-size: cover
+.sp-intro
+  height: auto
+  width: 100%
+  background: $orange
+  color: $white
+  padding: 25px 60px
+  box-sizing: border-box
+  font-size: 22px
+  font-family: "avenir"
+  line-height: 22px
+  overflow: hidden
+
+.sp-main
+  width: 100%
+  height: 100%
+  background: url(../img/back.png), linear-gradient(to bottom, $white 0%, rgba($pale, 0.4) 50%, rgba($pale, 0.9) 100%)
+  background-position: bottom
+  background-size: contain
+  background-repeat: no-repeat
+  padding-bottom: 25px
+  overflow: hidden
+  &-container
+    background: url(../img/back1.png) no-repeat
+    background-size: cover
+    width: 100%
+    height: 100%
+
+
+.sp-article
+  display: flex
+  align-items: center
+  box-sizing: border-box
+  &:hover
+    .sp-info
+      transform: translateX(0)
+      visibility: visible
+      opacity: 1
+    .sp-img
+      transform: translateX(-100%)
+  .sp-title
+    flex: 1
+    text-transform: uppercase
+    font-size: 65px
+    line-height: 65px
+    height: auto
+    &__first
+      font-family: "cr85"
+      color: $vine
+    &__second
+      font-family: "ptnarrow-reg"
+      color: $yellow
+      white-space: nowrap
+
+.sp-article:nth-child(even)
+  .sp-info
+    transform: translateX(-100%)
+  .sp-img
+    transform: translateX(0)
+  &:hover
+    .sp-info
+      transform: translateX(0)
+      visibility: visible
+      opacity: 1
+    .sp-img
+      transform: translateX(100%)
+
+.sp-item
+  flex: 1
+  position: relative
+  overflow: hidden
+  transition: all 0.35s ease-in-out
+  .sp-info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: center
+    font-family: "avenir"
+    visibility: hidden
+    opacity: 0
+    transform: translateX(100%)
+    transition: all 0.35s ease-in-out
+    h3
+      background: $orange
+      text-transform: uppercase
+      color: $white
+      text-align: center
+      font-size: 17px
+      padding: 10px
+      margin: 15px 25px 0
+    p
+      font-size: 14px
+      position: relative
+      color: $vine
+      padding: 20px 20px 20px
+      text-align: center
+  .sp-img
+    width: 100%
+    height: 100%
+    transform: translateX(0)
+    transition: all 0.35s ease-in-out
+
+.sp-animated
+  background: url(../img/highlight.png) no-repeat
+  background-size: cover
+  animation: light 2s
+  animation-iteration-count: 1
+  animation-timing-function: ease-out
+
+.sp-animated-comb
+  background: url(../img/highlight.png) no-repeat
+  background-size: cover
+  animation-iteration-count: 1
+  animation-timing-function: linear
+
+.sp-highlight, .sp-highlight-comb
+  position: absolute
+  z-index: 999
+
+.sp-article-
+  &first
+    height: 415px
+    padding: 50px 0 0
+    .sp-img-main
+      position: relative
+      z-index: 1
+    .sp-highlight-first, .sp-highlight-second
+      width: 120px
+      height: 120px
+    .sp-highlight-first
+      top: 60px
+      left: 90px
+      animation-delay: 1s
+    .sp-highlight-second
+      top: 58px
+      left: 105px
+      animation-delay: 1.5s
+    .sp-highlight-comb-first, .sp-highlight-comb-second
+      animation: light-comb1 3s
+    .sp-highlight-comb-first
+      width: 40px
+      height: 40px
+      left: 200px
+      top: 185px
+      animation-delay: 2s
+    .sp-highlight-comb-second
+      width: 25px
+      height: 25px
+      left: 215px
+      top: 197px
+      animation-delay: 2.5s
+
+    .sp-title
+      flex: 2
+      &__first, &__second
+        padding-left: 30px
+  &second
+    height: 370px
+    .sp-img-main
+      position: relative
+      z-index: 1
+    .sp-highlight-comb-first
+      animation: light-comb2 3s
+    .sp-highlight-comb-second, .sp-highlight-comb-third
+      animation: light-comb3 5s
+    .sp-highlight-comb-first
+      width: 60px
+      height: 60px
+      top: 180px
+      left: 200px
+      animation-delay: 2.5s
+    .sp-highlight-comb-second
+      width: 140px
+      height: 140px
+      top: 175px
+      left: 295px
+      animation-delay: 1.5s
+    .sp-highlight-comb-third
+      width: 60px
+      height: 60px
+      top: 240px
+      left: 345px
+      animation-delay: 1.7s
+      transform: rotate(45deg)
+    .sp-title
+      &__first, &__second
+        padding-left: 180px
+  &third
+    height: 370px
+    .sp-img-main
+      position: relative
+      z-index: 1
+    .sp-highlight
+      width: 120px
+      height: 120px
+      top: 40px
+      left: 100px
+      animation-delay: 1s
+    .sp-title
+      flex: 2
+      &__first, &__second
+        padding-left: 30px
+  &fouth
+    height: 400px
+    .sp-title
+      &__first, &__second
+        padding-left: 90px
+    .sp-img-main
+      position: relative
+      z-index: 1
+    .sp-highlight
+      width: 80px
+      height: 80px
+      top: 60px
+      right: 55px
+      animation-delay: 1s
+      transform: rotate(45deg)
+  &fifth
+    height: 415px
+    .sp-img-main
+      position: relative
+      z-index: 1
+    .sp-highlight-first
+      width: 120px
+      height: 120px
+      top: 130px
+      left: 38px
+      animation-delay: 1s
+    .sp-highlight-second
+      width: 60px
+      height: 60px
+      top: 143px
+      left: 105px
+      animation-delay: 1.5s
+    .sp-title
+      &__second
+        color: $white
+    .sp-info
+      margin-right: 30px
+
+
+
+@import "animation"
+@import "media"

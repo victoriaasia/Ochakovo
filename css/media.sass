@@ -1,0 +1,64 @@
+@media only screen and (max-width: 768px)
+  .sp-container
+    width: 768px
+  .sp-intro
+    text-align: center
+  .sp-main
+    padding-bottom: 0
+  .sp-article
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    &:hover
+      .sp-info
+        transform: translateX(-100px)
+        visibility: hidden
+        opacity: 0
+      .sp-img
+        transform: translateX(0)
+    .sp-title
+      font-size: 55px
+      line-height: 55px
+      flex: 1
+      &__second
+        white-space: normal
+  .sp-article:nth-child(even)
+    &:hover
+      .sp-info
+        transform: translateX(-100%)
+      .sp-img
+        transform: translateX(0)
+  .sp-article-
+    &first
+      .sp-title
+        flex: 1
+      .sp-highlight-comb-first
+        top: 195px
+        left: 215px
+      .sp-highlight-comb-second
+        top: 205px
+        left: 235px
+    &second
+      .sp-title
+        &__first, &__second
+          padding-left: 70px
+      .sp-highlight-comb-first
+        top: 120px
+        left: 130px
+      .sp-highlight-comb-second
+        top: 115px
+        left: 190px
+      .sp-highlight-comb-third
+        top: 160px
+        left: 245px
+    &fouth
+      .sp-highlight
+        top: 30px
+        right: 20px
+    &fifth
+      .sp-highlight-first
+        top: 70px
+        left: 15px
+      .sp-highlight-second
+        top: 90px
+        left: 65px
